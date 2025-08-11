@@ -1,8 +1,11 @@
+import { api } from "./AxiosService.js";
 
 export class GiftsService {
   async getGifts() {
-    const response = await fetch();
+    const response = await api.get('api/account');
+
     console.log('getGifts');
+    console.log(response);
   }
 }
 

@@ -1,4 +1,4 @@
-import { GiftsService } from "../services/GiftsService.js";
+import { giftsService } from "../services/GiftsService.js";
 import { Pop } from "../utils/Pop.js";
 
 export class GiftsController {
@@ -9,9 +9,10 @@ export class GiftsController {
 
   async getGifts() {
     try {
-      await GiftsService.getGifts();
+      await giftsService.getGifts();
     } catch (error) {
       Pop.toast("Could not get gifts", error);
+      console.log(error);
     }
   }
 
