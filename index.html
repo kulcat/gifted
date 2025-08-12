@@ -39,29 +39,35 @@
   </header>
 
   <!-- SECTION -->
-  <main class="container-fluid">
-    <div class="panel col-3 d-flex flex-column">
+  <main class="container-fluid row g-0 p-3 gap-3 flex-nowrap">
+    <div class="card p-3 bg-dark text-white sticky-top h-100 col-3 d-flex flex-column">
       <span class="h1 text-center">Gifted</span>
 
-      <form class="d-flex flex-column" method="" onsubmit="">
+      <form class="d-flex flex-column" onsubmit="return app.GiftsController.createGift(event)">
         <span>Create a Gift</span>
         <label for="tag">Tag</label>
-        <input type="text" name="tag">
+        <input type="text" name="tag" required>
 
         <label for="url">URL</label>
-        <input type="text" name="url">
+        <input type="text" name="url" required>
 
-        <input type="submit" value="Submit">
+        <button type="submit">
+          Submit
+        </button>
       </form>
 
       <form class="d-flex flex-column" method="" onsubmit="">
         <label for="tag">Search GIFs</label>
-        <input type="text" name="search">
-        <input type="submit" value="submit">
+        <div class="d-flex">
+          <input class="" type="text" name="search">
+          <button class="" type="submit">
+            <i class="mdi mdi:magnify"></i>
+          </button>
+        </div>
       </form>
 
     </div>
-    <div class="col-9">
+    <div id="gifts" class="col-9 d-flex flex-wrap gap-3">
 
     </div>
   </main>
