@@ -49,14 +49,15 @@
         <input type="text" name="tag" required>
 
         <label for="url">URL</label>
-        <input type="text" name="url" required>
+        <input id="giftUrl" type="text" name="url" required>
 
         <button type="submit">
           Submit
         </button>
       </form>
 
-      <form class="d-flex flex-column" method="" onsubmit="">
+      <span class="h2 text-center">Giphy</span>
+      <form class="d-flex flex-column" onsubmit="return app.GiphyController.search(event)">
         <label for="tag">Search GIFs</label>
         <div class="d-flex">
           <input class="" type="text" name="search">
@@ -65,7 +66,9 @@
           </button>
         </div>
       </form>
+      <div id="gifs" class="d-flex flex-wrap gap-3">
 
+      </div>
     </div>
     <div id="gifts" class="col-9 d-flex flex-wrap gap-3">
 

@@ -9,6 +9,8 @@ class ObservableAppState extends EventEmitter {
 
   /**@type {import('./models/Gift.js').Gifts[] | null} */
   gifts = [];
+
+  gifUrls = [];
 }
 
 export const AppState = createObservableProxy(new ObservableAppState())
