@@ -40,7 +40,7 @@
 
   <!-- SECTION -->
   <main class="container-fluid row g-0 p-3 gap-3 flex-nowrap">
-    <div class="card p-3 bg-dark text-white sticky-top h-100 col-3 d-flex flex-column">
+    <div class="card p-3 bg-dark text-white h-100 col-3 d-flex flex-column">
       <span class="h1 text-center">Gifted</span>
 
       <form class="d-flex flex-column" onsubmit="return app.GiftsController.createGift(event)">
@@ -49,9 +49,9 @@
         <input type="text" name="tag" required>
 
         <label for="url">URL</label>
-        <input id="giftUrl" type="text" name="url" required>
+        <input class="input" id="giftUrl" type="text" name="url" required>
 
-        <button type="submit">
+        <button class="btn btn-light" type="submit">
           Submit
         </button>
       </form>
@@ -60,13 +60,13 @@
       <form class="d-flex flex-column" onsubmit="return app.GiphyController.search(event)">
         <label for="tag">Search GIFs</label>
         <div class="d-flex">
-          <input class="" type="text" name="search">
-          <button class="" type="submit">
-            <i class="mdi mdi:magnify"></i>
+          <input class="w-100" type="text" name="search">
+          <button class="btn btn-light" type="submit">
+            <i class="mdi mdi-magnify"></i>
           </button>
         </div>
       </form>
-      <div id="gifs" class="d-flex flex-wrap gap-3">
+      <div id="gifs" class="d-flex flex-wrap">
 
       </div>
     </div>

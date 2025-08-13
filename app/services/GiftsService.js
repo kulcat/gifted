@@ -44,14 +44,6 @@ export class GiftsService {
     const response = await api.post(`api/gifts`, newGift);
     this.getGifts();
   }
-
-  // unfinished
-  async deleteGift(event) {
-    const formData = new FormData(event.target);
-
-    const response = await api.post(`api/gifts`, newGift);
-    this.getGifts();
-  }
 }
 
 
